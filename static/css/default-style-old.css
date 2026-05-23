@@ -1,0 +1,102 @@
+@keyframes reveal {
+  to {
+    clip-path: circle(150% at 50% 50%);
+  }
+}
+
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 232, 201);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+header h1{
+    padding-left: 15px;
+    font-size: 28px;
+}
+
+header nav{
+    padding-right: 15px;
+}
+
+main{
+    margin-top: 100px;
+    width: 70%;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.selected, .selected:visited{
+    color: #00558d;
+}
+
+.selected::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+nav a:not(.selected), nav a:not(.selected):visited{
+    text-decoration: none;
+    color: #0052CC;
+    font-weight: bold;
+}
+
+nav a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #00558d;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 50%;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    margin-top: 50px;
+    width: 100%;
+}
+
+footer a{
+    color: aquamarine;
+}
+
+

@@ -1,0 +1,16 @@
+{
+    "java" : "../portfolio/img/java.svg",
+    "c" : "../portfolio/img/c.svg",
+    "cpp" : "../portfolio/img/cplusplus.svg",
+    "csharp" : "../portfolio/img/csharp.png",
+    "css" : "../portfolio/img/css3.svg",
+    "php" : "../portfolio/img/php.svg",
+    "postgresql" : "../portfolio/img/postgresql.svg",
+    "docker" : "../portfolio/img/docker.svg",
+    "git" : "../portfolio/img/git.svg",
+    "html" : "../portfolio/img/html5.svg",
+    "js" : "../portfolio/img/js.svg",
+    "sqlite" : "../portfolio/img/sqlite.svg",
+    "r" : "../portfolio/img/r.svg",
+    "python" : "../portfolio/img/python.svg"
+}

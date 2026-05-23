@@ -1,0 +1,115 @@
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== FORMULAIRE ===== */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.5s ease forwards;
+}
+
+/* GROUPES */
+.input {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* LABELS */
+label {
+    width: 110%;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+    color: #8b949e;
+}
+
+/* INPUTS & TEXTAREA */
+input,
+textarea {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 0.6rem;
+    color: #c9d1d9;
+    font-family: inherit;
+
+    box-sizing: border-box;
+
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.5s ease forwards;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #58a6ff;
+    box-shadow: 0 0 0 2px rgba(88,166,255,0.2);
+}
+
+form input:nth-child(1) { animation-delay: 0.1s; }
+form input:nth-child(2) { animation-delay: 0.1s; }
+form textarea { animation-delay: 0.1s; }
+
+/* BOUTON */
+button {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .input {
+        flex-direction: column;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;   /* centre verticalement */
+    align-items: flex-start;   /* empêche l’étirement */
+    padding-top: 3rem;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+}

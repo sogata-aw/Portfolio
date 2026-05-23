@@ -1,0 +1,60 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projets réalisés</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/default-style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/projects-style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Maxime Rastelli - Développeur Informatique</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a class="selected" href="/projects">Projets Réalisés</a></li>
+                <li><a href="/contact">Me contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main_projects">
+        <div id="projects_grid">
+            {% for project in projects %}
+                <article class="project_table" id="p{{ project.id }}">
+                    <p>{{ project.nom }}</p>
+                    <img src="{{ url_for('static', path=project.img) }}" alt="p{{ project.id }}">
+                </article>
+            {% endfor %}
+        </div>
+        <article id="more_info" class="hidden">
+        </article>
+    </main>
+    <footer>
+        <div>
+            <h4>Me contacter</h4>
+            <p><b>Numéro de téléphone : </b>07 83 59 26 01<br><b>Adresse Mail :</b>
+                Maxime.rastelli@etu.univ-grenoble-alpes.fr</p>
+        </div>
+        <div>
+            <h4>Mes réseaux</h4>
+            <p><a href="https://www.linkedin.com/in/maxime-rastelli-19146b290/">LinkedIn</a><br><a
+                    href="https://github.com/sogata-aw">Github</a></p>
+        </div>
+    </footer>
+</body>
+<template id="info">
+    <div>
+        <p>Objectif : <span id="objectif"></span></p>
+        <p id="texte1"></p>
+        <p id="texte2"></p>
+        <div id="links_container">
+            <p id="links">Liens :</p>
+            <ul id="links_list">
+            </ul>
+        </div>
+    </div>
+</template>
+<script type="module" src="{{ url_for('static',path='js/projects.js') }}"></script>
+
+</html>

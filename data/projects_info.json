@@ -1,0 +1,117 @@
+{
+    "p1" : {
+        "objectif" : "développer une méthode de tri automatique pour des dépêches.",
+        "texte1" : "Nous avons fait un programme permettant de déterminer pour chaque dépêche la catégorie associé d'abord à partir de lexique crée par nous-même puis généré automatiquement. Nous avons ensuite optimisé le programme de manière à diminuer le temps de classement des dépêches.",
+        "texte2" : "J'ai travaillé sur la partie du tri manuelle et j'ai également fait le compte rendu en anglais.",
+        "liens" : [
+            {
+                "nom" : "Rapport",
+                "url" : "../pdf/SAE 1.012 report.pdf"
+            }
+        ]
+    },
+    "p2" : {
+        "objectif" : "installation d'un poste de travail avec configuration d'un IDE",
+        "texte1" : "J'ai installé un poste de travail sous la distribution Linux Debian 12 et installé plusieurs logiciels tels que NetBrains pour le développement et l'environnement virtuel Java. J'ai également réalisé une carte mentale expliquant comment le faire.",
+        "liens" : []
+    },
+    "p3" : {
+        "objectif" : "création et gestion d'une base de données sur le Titanic",
+        "texte1" : "Nous avons créé une base de données sur le Titanic en SQL en commençant par récolter des informations utiles pour établir les relations, puis un schéma, et enfin en la réalisant sur un poste de travail. Nous avons aussi créé des tests pour vérifier si la base fonctionnait, ainsi que des requêtes spécifiques et un bilan.",
+        "texte2" : "J'ai fait la partie création de la base de données et une partie des tests pour vérifier son bon fonctionnement.",
+        "liens" : [
+            {
+                "nom" : "Etape 1",
+                "url" : "../pdf/etape1_francoue.pdf"
+            },
+            {
+                "nom" : "Etape 2",
+                "url" : "../pdf/etape2_francoue.pdf"
+            },
+            {
+                "nom" : "Etape 3",
+                "url" : "../pdf/etape3_francoue.pdf"
+            },
+            {
+                "nom" : "Bilan",
+                "url" : "../pdf/bilan_S1_04_francoue.pdf"
+            }
+        ]
+    },
+    "p4" : {
+        "objectif" : "réaliser un site web qui convient aux 3ème en recherche de stage",
+        "texte1" : "Nous avons récolté des informations sur IBM et compilé cela dans un recueil de besoins. Ensuite, nous avons développé une maquette d’un site web institutionnel, puis l’avons réalisé en HTML et CSS de manière à ce qu’il soit compréhensible pour des élèves de 3ème en recherche de stage. Nous avons également procédé à une auto-évaluation selon certains critères.",
+        "texte2" : "J'ai collecté la plupart des informations sur leur secteur économique, réalisé une partie des pages de la maquette et fait la majorité du code HTML du site final.",
+        "liens" : []
+    },
+    "p5" : {
+        "objectif" : "nettoyer et analyser une base de données",
+        "texte1" : "Nous avons créé un code SQL pour extraire de la base de données des produits alimentaires ceux ayant le tag \"biscuit-and-cakes\" et vendus aux États-Unis. Un rapport en anglais a été rédigé pour analyser le nutriscore avec plusieurs graphiques réalisés en R Markdown.",
+        "texte2" : "Je me suis occupé de faire les graphiques et le code SQL pour extraire les données.",
+        "liens" : []
+    },
+    "p6" : {
+        "objectif" : "créer un guide d'installation de Debian en anglais",
+        "texte1" : "J'ai réalisé un guide en anglais sur comment installer Debian 12 avec un serveur PHP et PostgreSQL ainsi que la mise en place de phppgmyadmin.",
+        "liens" : []
+    },
+    "p7" : {
+        "objectif" : "développer un logiciel pour des gérants de club de ski",
+        "texte1" : "Nous avons réalisé un logiciel en Java et JavaFX à destination des clubs de ski leur permettant de gérer les membres, les trajets, le prêt de matériels ainsi que les cours de ski.",
+        "texte2" : "Je me suis occupé de la partie algorithmique et du backend en Java",
+        "liens" : [
+            {
+                "nom" : "Gestion de projet",
+                "url" : "../pdf/Dossier conception IHM.pdf"
+            },
+            {
+                "nom" : "Dossier de conception",
+                "url" : "../pdf/Dossier conception IHM.pdf"
+            },
+            {
+                "nom" : "Dossier d'analyse",
+                "url" : "../pdf/Dossier d'analyse et de conception.pdf"
+            }
+        ]
+    },
+    "p8" : {
+        "objectif" : "développer et déployer une application web valorisant le patrimoine culturel",
+        "texte1" : "Nous avons réalisé une application web en PHP mettant en valeur les maisons d'llustres faisant partie du patrimoine culturel. Notre site permet de les rechercher sur une carte interractive ainsi que de le noter et voir diverses informations à leur propos.",
+        "texte2" : "Je me suis occupé de la partie algorithmique et du backend en PHP ainsi que des contrôleurs",
+        "liens" : [
+            {
+                "nom" : "Phase de cadrage",
+                "url" : "../pdf/Doc Final GP.pdf"
+            },
+            {
+                "nom" : "Dossier de conception",
+                "url" : "../pdf/Document_final_phase2.pdf"
+            },
+            {
+                "nom" : "Bilan de projet",
+                "url" : "../pdf/equipe16-rendu-phase3.pdf"
+            }
+        ]
+    },
+    "p9" : {
+        "objectif" : "réaliser un site web utilisant une API publique",
+        "texte1" : "Nous avons réalisé un site web permettant de rechercher des amiibos par nom, séries, et personnage à l'aide de l'API AmiiboAPI. Lors de la recherche nous pouvons également filtrer le résultat. NOus avons également ajouté la possibilité de les ajouter aux favoris ou dans notre collection.",
+        "texte2" : "Je me suis occupé de la réalisation des filtres et de la communication avec l'API.",
+        "liens" : [
+            {
+                "nom" : "MyAmiiboList",
+                "url" : "https://maxime-rastelli.github.io/html/"
+            }
+        ]
+    },
+    "p10" : {
+        "objectif" : "réaliser un bot permettant d'automatiser des tâches répétitives",
+        "texte1" : "J'ai réalisé un bot permettant de faire des captcha, de créer des salons ou des rôles temporaires sur Discord en Python. Je me suis aidé de différentes tels que discorp.py permettant de faire le lien avec l'API officiel de Discord, pour les captchas, j'ai utilisé la librairie captcha.",
+        "liens" : [
+            {
+                "nom" : "MultiSpoon",
+                "url" : "https://github.com/sogata-aw/MultiSpoon"
+            }
+        ]
+    }
+}

@@ -1,0 +1,68 @@
+[
+    {
+        "id" : 1,
+        "nom" : "Réalisation d'un classement de dépêches",
+        "img" : "img/projects/p1.PNG",
+        "techno" : [
+            "java"
+        ]
+    },
+    {
+        "id" : 2,
+        "nom" : "Installation d'un poste de travail pour le développement",
+        "img" : "img/projects/carte.jpg",
+        "techno" : [
+            "bash"
+        ]
+    },
+    {
+        "id" : 3,
+        "nom" : "Création d'une base de données",
+        "img" : "img/projects/p3.PNG",
+        "techno" : [
+            "postgresql"
+        ]
+    },
+    {
+        "id" : 4,
+        "nom" : "Réalisation d'un site web institutionnel",
+        "img" : "img/projects/IBM.png",
+        "techno" : ["html", "css", "js"]
+    },
+    {
+        "id" : 5,
+        "nom" : "Exploitation d'une base de données",
+        "img" : "img/projects/p24.PNG",
+        "techno" : ["postgresql", "r"]
+    },
+    {
+        "id" : 6,
+        "nom" : "Installation de services réseau",
+        "img" : "img/projects/debian.png",
+        "techno" : ["bash", "php", "postgresql"]
+    },
+    {
+        "id" : 7,
+        "nom" : "Développement d'un logiciel de gestion pour les clubs de ski",
+        "img" : "img/projects/MONTski.svg",
+        "techno" : ["java", "javafx"]
+    },
+    {
+        "id" : 8,
+        "nom" : "Création et déploiement de services applicatifs",
+        "img" : "img/projects/logo.png",
+        "techno" : ["php", "html", "css", "js", "postgresql"]
+    },
+    {
+        "id" : 9,
+        "nom" : "Réalisation d'un site web utilisant l'API AmiiboAPI",
+        "img" : "img/projects/2.png",
+        "techno" : ["html", "css", "js"]
+    },
+    {
+        "id" : 10,
+        "nom" : "Développement d'un bot pour Discord",
+        "img" : "img/projects/MultiSpoon.png",
+        "techno" : ["python"]
+    }
+]
