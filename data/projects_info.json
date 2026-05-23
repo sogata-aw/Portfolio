@@ -6,7 +6,8 @@
         "liens" : [
             {
                 "nom" : "Rapport",
-                "url" : "../pdf/SAE 1.012 report.pdf"
+                "url" : "SAE 1.012 report.pdf",
+                "type" : "pdf"
             }
         ]
     },
@@ -22,19 +23,23 @@
         "liens" : [
             {
                 "nom" : "Etape 1",
-                "url" : "../pdf/etape1_francoue.pdf"
+                "url" : "etape1_francoue.pdf",
+                "type" : "pdf"
             },
             {
                 "nom" : "Etape 2",
-                "url" : "../pdf/etape2_francoue.pdf"
+                "url" : "etape2_francoue.pdf",
+                "type" : "pdf"
             },
             {
                 "nom" : "Etape 3",
-                "url" : "../pdf/etape3_francoue.pdf"
+                "url" : "etape3_francoue.pdf",
+                "type" : "pdf"
             },
             {
                 "nom" : "Bilan",
-                "url" : "../pdf/bilan_S1_04_francoue.pdf"
+                "url" : "bilan_S1_04_francoue.pdf",
+                "type" : "pdf"
             }
         ]
     },
@@ -62,15 +67,18 @@
         "liens" : [
             {
                 "nom" : "Gestion de projet",
-                "url" : "../pdf/Dossier conception IHM.pdf"
+                "url" : "Dossier conception IHM.pdf",
+                "type" : "pdf"
             },
             {
                 "nom" : "Dossier de conception",
-                "url" : "../pdf/Dossier conception IHM.pdf"
+                "url" : "Dossier conception IHM.pdf",
+                "type" : "pdf"
             },
             {
                 "nom" : "Dossier d'analyse",
-                "url" : "../pdf/Dossier d'analyse et de conception.pdf"
+                "url" : "Dossier d'analyse et de conception.pdf",
+                "type" : "pdf"
             }
         ]
     },
@@ -81,15 +89,18 @@
         "liens" : [
             {
                 "nom" : "Phase de cadrage",
-                "url" : "../pdf/Doc Final GP.pdf"
+                "url" : "Doc Final GP.pdf",
+                "type" : "pdf"
             },
             {
                 "nom" : "Dossier de conception",
-                "url" : "../pdf/Document_final_phase2.pdf"
+                "url" : "Document_final_phase2.pdf",
+                "type" : "pdf"
             },
             {
                 "nom" : "Bilan de projet",
-                "url" : "../pdf/equipe16-rendu-phase3.pdf"
+                "url" : "equipe16-rendu-phase3.pdf",
+                "type" : "pdf"
             }
         ]
     },
@@ -100,7 +111,8 @@
         "liens" : [
             {
                 "nom" : "MyAmiiboList",
-                "url" : "https://maxime-rastelli.github.io/html/"
+                "url" : "https://maxime-rastelli.github.io/html/",
+                "type" : "link"
             }
         ]
     },
@@ -110,7 +122,8 @@
         "liens" : [
             {
                 "nom" : "MultiSpoon",
-                "url" : "https://github.com/sogata-aw/MultiSpoon"
+                "url" : "https://github.com/sogata-aw/MultiSpoon",
+                "type" : "link"
             }
         ]
     }

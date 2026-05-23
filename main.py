@@ -6,7 +6,7 @@ from typing import Annotated
 
 from aiosmtplib import SMTPException
 from fastapi import FastAPI, Request, Form
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
@@ -55,6 +55,14 @@ async def get_infos():
 @app.get("/contact", response_class=HTMLResponse)
 async def contact(request: Request):
     return templates.TemplateResponse(request=request, name="contact.html")
+
+
+@app.get("/get_pdf/{name}")
+async def get_pdf(request: Request, name: str):
+    return FileResponse(
+        path="pdf/" + name,
+        media_type="application/pdf"
+    )
 
 @app.post("/send_mail", response_class=JSONResponse)
 async def send_mail(form: MailData):

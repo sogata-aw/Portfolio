@@ -32,7 +32,8 @@ window.onload = async function () {
             more_info_text[id].liens.forEach(lien => {
                 const li = document.createElement("li");
                 const a = document.createElement("a");
-                a.href = lien.url;
+                if(lien.type === "pdf")
+                a.href = `/get_pdf/${lien.url}`;
                 a.innerHTML = lien.nom;
                 li.appendChild(a);
                 ul.appendChild(li);
