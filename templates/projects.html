@@ -24,16 +24,7 @@
         </article>
     </main>
     <footer>
-        <div>
-            <h4>Me contacter</h4>
-            <p><b>Numéro de téléphone : </b>07 83 59 26 01<br><b>Adresse Mail :</b>
-                Maxime.rastelli@etu.univ-grenoble-alpes.fr</p>
-        </div>
-        <div>
-            <h4>Mes réseaux</h4>
-            <p><a href="https://www.linkedin.com/in/maxime-rastelli-19146b290/">LinkedIn</a><br><a
-                    href="https://github.com/sogata-aw">Github</a></p>
-        </div>
+        {% include "footer.html" ignore missing %}
     </footer>
 </body>
 <template id="info">
@@ -49,5 +40,4 @@
     </div>
 </template>
 <script type="module" src="{{ url_for('static',path='js/projects.js') }}"></script>
-
 </html>

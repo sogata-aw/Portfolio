@@ -1,8 +1,13 @@
 import { view } from './view_projects.js';
+import {typeWriter} from "./typing.js";
 
 let last_click = null;
 
 window.onload = async function () {
+    const title = document.querySelector("h1");
+
+    typeWriter(title, 20);
+
     const more_info_text = await fetch("/get_infos").then(data => data.json());
 
     const projectTemplate = document.getElementById("project");

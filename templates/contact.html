@@ -42,48 +42,8 @@
         </form>
     </main>
     <footer class="petit">
-        <div>
-            <h4>Me contacter</h4>
-            <p><b>Numéro de téléphone :</b> 07 83 59 26 01<br><b>Adresse Mail :</b> Maxime.rastelli@etu.univ-grenoble-alpes.fr</p>
-        </div>
-        <div>
-            <h4>Mes réseaux</h4>
-            <p><a href="https://www.linkedin.com/in/maxime-rastelli-19146b290/">LinkedIn</a><br><a href="https://github.com/sogata-aw">Github</a></p>
-        </div>
+        {% include "footer.html" ignore missing %}
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="{{ url_for('static', path='js/view_contact.js') }}"></script>
-    <script>
-        contactForm.addEventListener("submit", (event) => {
-            event.preventDefault(); // Empêche le rechargement de la page
-
-            let form = new FormData(document.forms["contactForm"])
-
-            fetch("/send_mail", {
-                method: "POST",
-                body: JSON.stringify({
-                    nom: form.get("nom"),
-                    prenom: form.get("prenom"),
-                    email: form.get("email"),
-                    num: form.get("num"),
-                    message: form.get("message")
-                }),
-                headers: {
-                    "Content-type": "application/json; charset=UTF-8"
-                }
-            })
-            .then(response => {
-                if(response.ok){
-                    alert("E-mail envoyé avec succès !");
-                }else{
-                    alert("Une erreur est survenue...")
-                }
-                document.getElementById("contactForm").reset();
-            })
-            .catch(error => {
-                console.error("Erreur:", error);
-            });
-        });
-    </script>
 </body>
+<script type="module" src="{{ url_for('static', path='js/contact.js') }}"></script>
 </html>

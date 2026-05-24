@@ -128,7 +128,7 @@ footer p {
     color: #0d1117;
 }
 
-h2.finished::after {
+h2.finished::after, h1.finished::after {
     content: "_";
     color: #3fb950;
     margin-left: 5px;
