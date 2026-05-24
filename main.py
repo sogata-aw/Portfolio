@@ -41,12 +41,12 @@ with open("data/projects_info.json", encoding="utf-8") as file:
 
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
-    return templates.TemplateResponse(request=request, name="index.html", context={"projects": projects[-3:]})
+    return templates.TemplateResponse(request=request, name="index.html", context={"projects": projects[-3:], "page": "index"})
 
 
 @app.get("/projects", response_class=HTMLResponse)
 async def projects_template(request: Request):
-    return templates.TemplateResponse(request=request, name="projects.html", context={"projects": projects})
+    return templates.TemplateResponse(request=request, name="projects.html", context={"projects": projects, "page": "projects"})
 
 @app.get("/get_infos", response_class=JSONResponse)
 async def get_infos():
@@ -54,7 +54,7 @@ async def get_infos():
 
 @app.get("/contact", response_class=HTMLResponse)
 async def contact(request: Request):
-    return templates.TemplateResponse(request=request, name="contact.html")
+    return templates.TemplateResponse(request=request, name="contact.html", context={"page": "contact"})
 
 
 @app.get("/get_pdf/{name}")

@@ -7,14 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>Maxime Rastelli - Développeur Informatique</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/projects">Projets Réalisés</a></li>
-                <li><a class="selected" href="/contact">Me contacter</a></li>
-            </ul>
-        </nav>
+        {% include "header.html" ignore missing %}
     </header>
     <main>
         <form name="contact-form" id="contactForm">

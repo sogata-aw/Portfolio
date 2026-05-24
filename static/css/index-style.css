@@ -120,11 +120,11 @@ article h2 {
 }
 
 /* ===== LISTES ===== */
-ul {
+section ul {
     margin-left: 1.2rem;
 }
 
-li {
+section ul li {
     margin: 0.4rem 0;
 }
 
