@@ -14,27 +14,27 @@
             <div>
                 <div class="input">
                     <div class="label">
-                        <label for="name">Nom :</label>
+                        <label for="name" class="required">Nom:</label>
                         <input id="name" type="text" name="nom" placeholder="Votre nom" autofocus required>
                     </div>
                     <div class="label">
-                        <label for="prenom">Prénom :</label>
+                        <label for="prenom" class="required">Prénom:</label>
                         <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required>
                     </div>
 
                 </div>
                 <div class="input">
                     <div class="label">
-                        <label for="email">Adresse mail :</label>
+                        <label for="email" class="required">Adresse mail:</label>
                         <input type="email" name="email" id="email" placeholder="Votre adresse mail" required>
                     </div>
                     <div class="label">
-                        <label for="num">Votre numéro de téléphone :</label>
+                        <label for="num">Numéro de téléphone:</label>
                         <input type="tel" name="num" id="num" pattern="0[1-9](?:[0-9]{2}){4}" placeholder="Votre numéro de téléphone">
                     </div>
                 </div>
                 <div class="label">
-                    <label for="message">Écrivez votre message :</label>
+                    <label for="message" class="required">Écrivez votre message:</label>
                     <textarea name="message" id="message" required></textarea>
                 </div>
                 <button type="submit" class="for">Envoyer</button>

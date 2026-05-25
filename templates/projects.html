@@ -16,6 +16,11 @@
             {% for project in projects %}
                 <article class="project_table" id="p{{ project.id }}">
                     <p>{{ project.nom }}</p>
+                    {% for tech in techno %}
+                        <div class="techno">
+                            im
+                        </div>
+                    {% endfor %}
                     <img src="{{ url_for('static', path=project.img) }}" alt="p{{ project.id }}">
                 </article>
             {% endfor %}

@@ -91,7 +91,7 @@ section > div > div {
 .programmation div:hover,
 section > div > div:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(88,166,255,0.15);
+    box-shadow: 0 6px 20px rgba(63, 185, 80, 1);
 }
 
 /* ===== SECTIONS / ARTICLES ===== */
@@ -161,10 +161,6 @@ section ul li {
     color: #c9d1d9;
     font-size: 0.9rem;
     text-align: right;
-}
-
-.cursor {
-    color: #3fb950;
 }
 
 .btn{

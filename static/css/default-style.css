@@ -134,5 +134,9 @@ h2.finished::after, h1.finished::after {
     margin-left: 5px;
 }
 
+.cursor {
+    color: #3fb950;
+}
+
 
 

@@ -121,7 +121,7 @@
         "texte1" : "J'ai réalisé un bot permettant de faire des captcha, de créer des salons ou des rôles temporaires sur Discord en Python. Je me suis aidé de différentes tels que discorp.py permettant de faire le lien avec l'API officiel de Discord, pour les captchas, j'ai utilisé la librairie captcha.",
         "liens" : [
             {
-                "nom" : "MultiSpoon",
+                "nom" : "Code source",
                 "url" : "https://github.com/sogata-aw/MultiSpoon",
                 "type" : "link"
             }

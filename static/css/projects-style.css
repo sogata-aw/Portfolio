@@ -24,9 +24,11 @@
 }
 
 .project_table:hover {
-    transform: translateX(0.5rem);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    border-left: 3px solid #3fb950; /* vert terminal */
+    /*transform: translateX(0.5rem);*/
+    /*box-shadow: 0 4px 12px rgba(0,0,0,0.2);*/
+    /*border-left: 3px solid #3fb950; !* vert terminal *!*/
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(63, 185, 80, 1);
 }
 
 /* TITRE */
