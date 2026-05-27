@@ -76,3 +76,16 @@
   margin-top: 2rem;
   margin-left: -3rem;
 }
+
+.techno {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 7px;
+}
+
+.techno img {
+    width: 45px;
+    height: auto;
+    padding: 5px;
+}

@@ -38,6 +38,8 @@ with open("data/projects.json", encoding="utf-8") as file:
 with open("data/projects_info.json", encoding="utf-8") as file:
     projects_info = json.load(file)
 
+with open("data/techno.json", encoding="utf-8") as file:
+    technos = json.load(file)
 
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
@@ -46,7 +48,7 @@ async def root(request: Request):
 
 @app.get("/projects", response_class=HTMLResponse)
 async def projects_template(request: Request):
-    return templates.TemplateResponse(request=request, name="projects.html", context={"projects": projects, "page": "projects"})
+    return templates.TemplateResponse(request=request, name="projects.html", context={"projects": projects, "page": "projects", "technos": technos})
 
 @app.get("/get_infos", response_class=JSONResponse)
 async def get_infos():
