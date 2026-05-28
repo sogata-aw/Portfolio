@@ -1,4 +1,17 @@
+@keyframes glow{
+    0% {
+        box-shadow: none;
+    }
 
+    50% {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(63, 185, 80, 1);
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
 
 /* ===== GRILLE PROJETS ===== */
 #projects_grid {
@@ -8,13 +21,15 @@
 }
 
 /* ===== CARTE ===== */
-.project_table {
+.project_table, .technos img {
     background: #161b22;
     border: 1px solid #30363d;
     border-radius: 14px;
     padding: 1rem;
     text-align: center;
+}
 
+.project_table {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,7 +38,7 @@
     border-left: 3px solid transparent;
 }
 
-.project_table:hover {
+.project_table:hover, .technos img:hover{
     /*transform: translateX(0.5rem);*/
     /*box-shadow: 0 4px 12px rgba(0,0,0,0.2);*/
     /*border-left: 3px solid #3fb950; !* vert terminal *!*/
@@ -84,8 +99,27 @@
     margin-bottom: 7px;
 }
 
-.techno img {
+.techno img, .technos img {
     width: 45px;
     height: auto;
     padding: 5px;
+}
+
+.technos {
+    position: absolute;
+    left: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.technos img {
+    width: 75px;
+    height: auto;
+    padding: 10px;
+}
+
+.highlight {
+    animation: glow 3s 0s 5;
 }

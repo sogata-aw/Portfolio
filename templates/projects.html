@@ -12,6 +12,13 @@
         {% include "header.html" ignore missing %}
     </header>
     <main class="main_projects">
+        <div class="technos">
+            {% for tech in technos %}
+                <div class="tech">
+                    <img src="{{ url_for('static', path=technos[tech]) }}" alt="{{ tech }}">
+                </div>
+            {% endfor %}
+        </div>
         <div id="projects_grid">
             {% for project in projects %}
                 <article class="project_table" id="p{{ project.id }}">

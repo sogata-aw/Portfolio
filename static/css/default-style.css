@@ -61,7 +61,7 @@ main {
 
 
 /* ===== BOUTONS ===== */
-button {
+button:not(.tech) {
     background: linear-gradient(135deg, #58a6ff, #3fb950);
     border: none;
     border-radius: 8px;

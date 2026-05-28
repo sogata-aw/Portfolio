@@ -60,9 +60,6 @@ window.onload = async function () {
                 });
     }
 
-
-    view.articles = document.querySelectorAll(".project_table")
-
     view.articles.forEach((article) => {
         article.addEventListener("click", function () {
             if (last_click == article.id) {
@@ -88,4 +85,24 @@ window.onload = async function () {
             }
         })
     });
+
+    view.technos.forEach((techno) => {
+        techno.addEventListener("click", () => {
+            console.log("called");
+            const techs = document.querySelectorAll(".techno img");
+            console.log(techs);
+            techs.forEach((tech) => {
+                tech.addEventListener("animationend", (event) => {
+                    tech.classList.remove("highlight");
+                });
+
+                console.log(tech.getAttribute("alt") === techno.getAttribute("alt"))
+                console.log(tech.getAttribute("alt"));
+                console.log(techno.getAttribute("alt"));
+                if (tech.getAttribute("alt") === techno.getAttribute("alt")){
+                    tech.classList.add("highlight");
+                }
+            })
+        });
+    })
 }
