@@ -14,5 +14,10 @@
     "r" : "img/langage/r.svg",
     "python" : "img/langage/python.svg",
     "bash" : "img/langage/bash.svg",
-    "javafx" : "img/langage/javafx.png"
+    "javafx" : "img/langage/javafx.png",
+    "angular" : "img/langage/angular.png",
+    "symfony" : "img/langage/symfony.svg",
+    "bootstrap" : "img/langage/bootstrap.svg",
+    "flutter" : "img/langage/flutter.svg",
+    "unity" : "img/langage/unity.svg"
 }
