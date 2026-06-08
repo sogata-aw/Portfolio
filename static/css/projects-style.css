@@ -108,13 +108,10 @@
 }
 
 .technos {
-    position: absolute;
-    left: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    width: 13%
 }
 
 .technos img {
@@ -125,4 +122,14 @@
 
 .highlight {
     animation: glow 3s 0s 5;
+}
+
+.lang {
+    position: absolute;
+    left: 50px;
+    width: 13%;
+}
+
+.lang p{
+    font-size: 14px;
 }
