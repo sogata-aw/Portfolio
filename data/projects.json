@@ -44,14 +44,14 @@
     {
         "id" : 8,
         "nom" : "Réalisation d'un logiciel de tri automatique",
-        "img" : "img/projects/2.png",
-        "techno" : ["python"]
+        "img" : "img/langage/pyqt.svg",
+        "techno" : ["python", "pyqt"]
     },
     {
         "id" : 9,
         "nom" : "Réalisation d'un logiciel de compteur de shiny",
-        "img" : "img/projects/2.png",
-        "techno" : ["python"]
+        "img" : "img/langage/pyqt.svg",
+        "techno" : ["python", "pyqt"]
     },
     {
         "id" : 10,
