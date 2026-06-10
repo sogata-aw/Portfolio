@@ -1,0 +1,94 @@
+%inputs {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 0.6rem;
+    color: #c9d1d9;
+    font-family: inherit;
+
+    box-sizing: border-box;
+
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.5s ease forwards;
+
+    &:focus {
+        outline: none;
+        border-color: #58a6ff;
+        box-shadow: 0 0 0 2px rgba(88,166,255,0.2);
+    }
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.input {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+form {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.5s ease forwards;
+}
+
+html {
+    height: 100%;
+}
+
+input {
+    @extend %inputs;
+}
+
+label {
+    width: 110%;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+    color: #8b949e;
+
+    .required {
+        &::after {
+            content: ' *';
+            color: red;
+        }
+    }
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;   /* centre verticalement */
+    align-items: flex-start;   /* empêche l’étirement */
+    padding-top: 3rem;
+}
+
+textarea {
+    @extend %inputs;
+    min-height: 120px;
+    resize: vertical;
+}

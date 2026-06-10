@@ -1,0 +1,147 @@
+$green-ide: #3fb950;
+$blue-ide: #58a6ff;
+
+%hovered {
+    background: #21262d;
+    color: #3fb950;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+}
+
+header {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 1.5rem 2rem;
+
+    h1 {
+        font-size: 1.4rem;
+        color: $blue-ide;
+    }
+}
+
+a {
+    color: $blue-ide;
+    text-decoration: none;
+}
+
+nav {
+    ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin-top: 1rem;
+    }
+
+    a {
+        padding: 0.3rem 0.6rem;
+        border-radius: 6px;
+
+        &.selected {
+            @extend %hovered;
+        }
+
+        &:hover {
+            @extend %hovered;
+        }
+    }
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+button {
+    a {
+        color: inherit;
+    }
+
+    &:not(.tech) {
+        background: linear-gradient(135deg, $blue-ide, $green-ide);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 1rem;
+
+        padding: 10px 20px;
+        position: relative;
+        transition: all 1s;
+        overflow: hidden;
+    }
+
+    &:hover {
+        filter: brightness(1.1);
+        color: white;
+
+        &::before {
+            width: 160%;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        top: 0;
+        left: -40px;
+        transform: skewX(45deg);
+        background-color: #3399ff;
+        z-index: -1;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+footer {
+    background: #161b22;
+    border-top: 1px solid #30363d;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    h4 {
+        color: $blue-ide;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+::selection {
+    background: $blue-ide;
+    color: #0d1117;
+}
+
+.finished {
+    &::after {
+        content: "_";
+        color: $green-ide;
+        margin-left: 5px;
+    }
+}
+
+.cursor {
+    color: $green-ide;
+}

@@ -1,9 +1,14 @@
 import json
 import os
+from contextlib import asynccontextmanager
+
 import aiosmtplib
 from email.message import EmailMessage
 from typing import Annotated
 
+import sass
+
+import scss
 from aiosmtplib import SMTPException
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
@@ -12,6 +17,7 @@ from fastapi.templating import Jinja2Templates
 
 from dotenv import load_dotenv
 from pydantic import BaseModel
+import sass
 
 
 class MailData(BaseModel):
@@ -21,13 +27,18 @@ class MailData(BaseModel):
     num: str
     message: str
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    base = os.path.dirname(__file__)
+    sass.compile(dirname=(os.path.join(base, "scss"), os.path.join(base, "static/css")))
+    yield
 
 load_dotenv(".env")
 
 GMAIL_USER = os.getenv("GMAIL_USER")
 GMAIL_TOKEN = os.getenv("GMAIL_TOKEN")
-app = FastAPI()
+
+app = FastAPI(lifespan=lifespan)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
