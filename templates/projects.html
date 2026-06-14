@@ -15,7 +15,6 @@
         <div class="lang">
             <p>Langages et technologies utilisés dans les projets :</p>
             <div class="technos">
-
                 {% for tech in technos %}
                     <div class="tech">
                         <img src="{{ url_for('static', path=technos[tech]) }}" alt="{{ tech }}">
