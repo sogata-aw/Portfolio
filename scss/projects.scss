@@ -5,9 +5,13 @@
     padding: 1rem;
     text-align: center;
 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left 0.3s ease;
+    border-left: 3px solid transparent;
+
     &:hover {
         transform: translateY(-4px);
         box-shadow: 0 6px 20px rgba(63, 185, 80, 1);
+        cursor: pointer;
     }
 }
 
@@ -61,8 +65,9 @@
 }
 
 #projects_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
 }
 
@@ -77,7 +82,6 @@
 .lang {
     display: flex;
     flex-direction: column;
-    width: 80%;
     margin: 10px;
 
     p {
@@ -90,9 +94,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left 0.3s ease;
-    border-left: 3px solid transparent;
+    width: 260px;
 
     p {
         color: #58a6ff;
@@ -115,6 +117,8 @@
 .technos {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 
     img {
         @extend %card;
@@ -127,7 +131,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 7px;
 
     img {
