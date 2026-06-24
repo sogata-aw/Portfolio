@@ -54,7 +54,10 @@ with open("data/techno.json", encoding="utf-8") as file:
 
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
-    return templates.TemplateResponse(request=request, name="index.html", context={"projects": projects[-3:], "page": "index"})
+    languages = {k: v for k, v in technos.items() if v["type"] == "language"}
+    frameworks = {k: v for k, v in technos.items() if v["type"] != "language"}
+
+    return templates.TemplateResponse(request=request, name="index.html", context={"projects": projects[-3:], "languages": dict(sorted(languages.items(), key=lambda item: item[1]["order"])), "frameworks": dict(sorted(frameworks.items(), key=lambda item: item[1]["order"])), "page": "index"})
 
 
 @app.get("/projects", response_class=HTMLResponse)

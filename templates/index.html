@@ -56,8 +56,8 @@
 
             <!-- ===== DIPLÔMES ===== -->
         <article class="sec">
+            <h2>Mes diplômes</h2>
             <section>
-                <h2>Mes diplômes</h2>
                 <ul>
                     <li>Études supérieures</li>
                     <li>Collège et lycée
@@ -74,18 +74,17 @@
         <section>
             <h2>Langages informatiques</h2>
             <div class="programmation">
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/python.svg') }}"><p>Python</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/php.svg') }}"><p>PHP</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/javascript.svg') }}"><p>JavaScript</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/java.svg') }}"><p>Java</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/postgresql.svg') }}"><p>PostgreSQL</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/html5.svg') }}"><p>HTML</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/css3.svg') }}"><p>CSS</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/cplusplus.svg') }}"><p>C++</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/csharp.svg') }}"><p>C#</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/r.svg') }}"><p>R</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/sqlite.svg') }}"><p>SQLite</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/langage/c.svg') }}"><p>C</p></div>
+                {% for language in languages %}
+                    <div><img class="logo" src="{{ url_for('static', path=languages[language].url) }}"><p>{{ languages[language].name }}</p></div>
+                {% endfor %}
+            </div>
+        </section>
+        <section>
+            <h2>Framworks et utilitaires informatiques</h2>
+            <div class="programmation">
+                {% for framework in frameworks %}
+                    <div><img class="logo" src="{{ url_for('static', path=frameworks[framework].url) }}"><p>{{ frameworks[framework].name }}</p></div>
+                {% endfor %}
             </div>
         </section>
 
@@ -102,9 +101,8 @@
 
         <!-- ===== EXPÉRIENCES ===== -->
         <article class="sec">
+            <h2>Expériences professionnelles</h2>
             <section class="experiences">
-                <h2>Expériences professionnelles</h2>
-
                 <div class="experience">
                     <span class="title">Stagiaire chez Schneider Electric (EcoStruxure Control Engineering)</span>
                     <span class="details">Grenoble | Mars 2026 – Juin 2026</span>
@@ -124,8 +122,8 @@
 
         <!-- ===== INTÉRÊTS ===== -->
         <article class="sec">
-            <section>
-                <h2>Centres d’intérêts</h2>
+            <h2>Centres d’intérêts</h2>
+            <section>    
                 <ul>
                     <li>Jeux vidéo</li>
                     <li>Mangas</li>

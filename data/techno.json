@@ -1,26 +1,146 @@
 {
-    "angular" : "img/langage/angular.png",
-    "bash" : "img/langage/bash.svg",
-    "bootstrap" : "img/langage/bootstrap.png",
-    "c" : "img/langage/c.svg",
-    "cpp" : "img/langage/cplusplus.svg",
-    "csharp" : "img/langage/csharp.svg",
-    "css" : "img/langage/css3.svg",
-    "docker" : "img/langage/docker.svg",
-    "discordpy" : "img/langage/discordpy.webp",
-    "flutter" : "img/langage/flutter.svg",
-    "git" : "img/langage/git.svg",
-    "html" : "img/langage/html5.svg",
-    "java" : "img/langage/java.svg",
-    "javafx" : "img/langage/javafx.png",
-    "js" : "img/langage/javascript.svg",
-    "php" : "img/langage/php.svg",
-    "postgresql" : "img/langage/postgresql.svg",
-    "pyqt" : "img/langage/pyqt.svg",
-    "pydantic" : "img/langage/pydantic.png",
-    "python" : "img/langage/python.svg",
-    "r" : "img/langage/r.svg",
-    "sqlite" : "img/langage/sqlite.svg",
-    "symfony" : "img/langage/symfony.svg",
-    "unity" : "img/langage/unity.svg"
+    "angular": {
+        "name": "Angular",
+        "type": "framework",
+        "url": "img/langage/angular.png",
+        "order": 8
+    },
+    "bash": {
+        "name": "Bash", 
+        "type": "language",
+        "url": "img/langage/bash.svg",
+        "order": 8
+    },
+    "bootstrap": {
+        "name": "Bootstrap",
+        "type": "framework",
+        "url": "img/langage/bootstrap.png",
+        "order": 11
+    },
+    "c" : {
+        "name": "C",
+        "type": "language",
+        "url": "img/langage/c.svg",
+        "order": 13
+    },
+    "cpp" : {
+        "name": "C++",
+        "type": "language",
+        "url": "img/langage/cplusplus.svg",
+        "order": 12
+    },
+    "csharp" : {
+        "name": "C#",
+        "type": "language",
+        "url": "img/langage/csharp.svg",
+        "order": 12
+    },
+    "css" : {
+        "name": "CSS",
+        "type": "language",
+        "url": "img/langage/css3.svg",
+        "order": 11
+    },
+    "docker" : {
+        "name": "Docker",
+        "type": "other",
+        "url": "img/langage/docker.svg",
+        "order": 4
+    },
+    "discordpy" : {
+        "name": "Discord.py",
+        "type": "library",
+        "url": "img/langage/discordpy.webp",
+        "order": 1
+    },
+    "flutter" : {
+        "name": "Flutter",
+        "type": "framework",
+        "url": "img/langage/flutter.svg",
+        "order": 9
+    },
+    "git" : {
+        "name": "Git",
+        "type": "other",
+        "url": "img/langage/git.svg",
+        "order": 3
+    },
+    "html" : {
+        "name": "HTML",
+        "type": "language",
+        "url": "img/langage/html5.svg",
+        "order": 9
+    },
+    "java" : {
+        "name": "Java",
+        "type": "language",
+        "url": "img/langage/java.svg",
+        "order": 5
+    },
+    "javafx" : {
+        "name": "JavaFX",
+        "type": "framework",
+        "url": "img/langage/javafx.png",
+        "order": 10
+    },
+    "js" : {
+        "name": "JavaScript",
+        "type": "language",
+        "url": "img/langage/javascript.svg",
+        "order": 3
+    },
+    "php" : {
+        "name": "PHP",
+        "type": "language",
+        "url": "img/langage/php.svg",
+        "order": 2
+    },
+    "postgresql" : {
+        "name": "PostgreSQL",
+        "type": "language",
+        "url": "img/langage/postgresql.svg",
+        "order": 7
+    },
+    "pydantic" : {
+        "name": "Pydantic",
+        "type": "library",
+        "url": "img/langage/pydantic.png",
+        "order": 2
+    },
+    "pyqt" : {
+        "name": "PyQt",
+        "type": "library",
+        "url": "img/langage/pyqt.svg",
+        "order": 6
+    },
+    "python" : {
+        "name": "Python",
+        "type": "language",
+        "url": "img/langage/python.svg",
+        "order": 1
+    },
+    "r": {
+        "name": "R",
+        "type": "language",
+        "url": "img/langage/r.svg",
+        "order": 13
+    },
+    "sqlite": {
+        "name": "SQLite",
+        "type": "language",
+        "url": "img/langage/sqlite.svg",
+        "order": 6
+    },
+    "symfony": {
+        "name": "Symfony",
+        "type": "framework",
+        "url": "img/langage/symfony.svg",
+        "order": 5
+    },
+    "unity" : {
+        "name": "Unity",
+        "type": "framework",
+        "url": "img/langage/unity.svg",
+        "order": 7
+    }
 }
