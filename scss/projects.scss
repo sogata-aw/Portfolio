@@ -1,6 +1,8 @@
+@import "default.scss";
+
 %card { /* .project_table, .technos img */
-    background: #161b22;
-    border: 1px solid #30363d;
+    background: $background2;
+    border: 1px solid$grey-border;
     border-radius: 14px;
     padding: 1rem;
     text-align: center;
@@ -10,7 +12,7 @@
 
     &:hover {
         transform: translateY(-4px);
-        box-shadow: 0 6px 20px rgba(63, 185, 80, 1);
+        box-shadow: 0 6px 20px $green-ide;
         cursor: pointer;
     }
 }
@@ -29,7 +31,7 @@
 
     50% {
         transform: translateY(-4px);
-        box-shadow: 0 6px 20px rgba(63, 185, 80, 1);
+        box-shadow: 0 6px 20px $green-ide;
     }
 
     100% {
@@ -97,7 +99,7 @@
     width: 260px;
 
     p {
-        color: #58a6ff;
+        color: $blue-ide;
         font-size: 0.95rem;
         margin-bottom: 1rem;
     }
@@ -105,7 +107,7 @@
     img {
         object-fit: cover;
         border-radius: 10px;
-        border: 1px solid #30363d;
+        border: 1px solid $grey-border;
     }
 
     > img {
@@ -146,8 +148,8 @@
 
 .visible{
     display: block;
-    background: #161b22;
-    border: 1px solid #30363d;
+    background: $background2;
+    border: 1px solid $grey-border;
     border-radius: 12px;
     padding: 1.5rem;
     margin-top: 2rem;

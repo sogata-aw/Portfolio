@@ -1,13 +1,15 @@
+@import "default.scss";
+
 %div_in_div {
-    background: #0d1117;
-    border: 1px solid #30363d;
+    background: $background1;
+    border: 1px solid $grey-border;
     border-radius: 10px;
     padding: 1rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
         transform: translateY(-4px);
-        box-shadow: 0 6px 20px rgba(63, 185, 80, 1);
+        box-shadow: 0 6px 20px $green-ide;
     }
 }
 
@@ -19,15 +21,15 @@
 }
 
 %h2_style {
-    background: #161b22;
-    border: 1px solid #30363d;
+    background: $background2;
+    border: 1px solid $grey-border;
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 2rem;
     box-shadow: 0 0 0 1px rgba(88, 166, 255, 0.05);
 
     h2 {
-        color: #58a6ff;
+        color: $blue-ide;
         margin-bottom: 1rem;
     }
 }
@@ -35,13 +37,6 @@
 #more {
     display: block;
     margin-left: auto;
-}
-
-.btn {
-    text-align: right;
-    color: #0d1117;
-    background: linear-gradient(135deg, #58a6ff, #3fb950);
-    text-decoration: none;
 }
 
 .content {
@@ -61,14 +56,14 @@
     display: flex;
     justify-content: space-between; /* titre à gauche, détails à droite */
     align-items: center;
-    background: #0d1117;
-    border-left: 3px solid #58a6ff;
+    background: $background1;
+    border-left: 3px solid $blue-ide;
     padding: 0.8rem 1rem;
     border-radius: 8px;
     text-align: left;
 
     .title {
-        color: #3fb950;
+        color: $green-ide;
         font-weight: bold;
         width: 40%;
     }
@@ -92,9 +87,9 @@
     display: flex;
     flex-direction: column;
 
-    background-color: #161b22;
+    background-color: $background2;
     padding: 1rem;
-    border: 1px solid #30363d;
+    border: 1px solid $grey-border;
     border-radius: 12px;
 
     position: sticky;
@@ -122,8 +117,8 @@
         text-align: center;
         padding: 0.4rem;
         border-radius: 6px;
-        background: #161b22;
-        border: 1px solid #30363d;
+        background: $background2;
+        border: 1px solid $grey-border;
         font-size: 0.9rem;
     }
 }
@@ -148,7 +143,7 @@
     width: 150px;
     height: 150px;
     border-radius: 12px;
-    border: 2px solid #30363d;
+    border: 2px solid $grey-border;
     object-fit: cover;
 }
 

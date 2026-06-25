@@ -1,9 +1,13 @@
+$grey-border: #30363d;
+$background1: #0d1117;
+$background2: #161b22;
+
 $green-ide: #3fb950;
 $blue-ide: #58a6ff;
 
 %hovered {
     background: #21262d;
-    color: #3fb950;
+    color: $green-ide;
 }
 
 * {
@@ -18,14 +22,14 @@ html {
 
 body {
     font-family: "JetBrains Mono", "Fira Code", monospace;
-    background-color: #0d1117;
+    background-color: $background1;
     color: #c9d1d9;
     line-height: 1.6;
 }
 
 header {
-    background: #161b22;
-    border-bottom: 1px solid #30363d;
+    background: $background2;
+    border-bottom: 1px solid $grey-border;
     padding: 1.5rem 2rem;
 
     h1 {
@@ -111,8 +115,8 @@ button {
 }
 
 footer {
-    background: #161b22;
-    border-top: 1px solid #30363d;
+    background: $background2;
+    border-top: 1px solid $grey-border;
     padding: 2rem;
     display: flex;
     justify-content: space-between;
@@ -131,7 +135,7 @@ footer {
 
 ::selection {
     background: $blue-ide;
-    color: #0d1117;
+    color: $background1;
 }
 
 .finished {

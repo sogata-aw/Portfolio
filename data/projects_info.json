@@ -3,7 +3,13 @@
         "objectif" : "réaliser un site web qui convient aux 3ème en recherche de stage",
         "texte1" : "Nous avons récolté des informations sur IBM et compilé cela dans un recueil de besoins. Ensuite, nous avons développé une maquette d’un site web institutionnel, puis l’avons réalisé en HTML et CSS de manière à ce qu’il soit compréhensible pour des élèves de 3ème en recherche de stage. Nous avons également procédé à une auto-évaluation selon certains critères.",
         "texte2" : "J'ai collecté la plupart des informations sur leur secteur économique, réalisé une partie des pages de la maquette et fait la majorité du code HTML du site final.",
-        "liens" : []
+        "liens" : [
+            {
+                "nom": "Recueil des besoins",
+                "url": "IBM.pdf",
+                "type": "pdf"
+            }
+        ]
     },
     "p2" : {
         "objectif" : "créer un guide d'installation de Debian en anglais",
@@ -17,7 +23,7 @@
         "liens" : [
             {
                 "nom" : "Gestion de projet",
-                "url" : "Dossier conception IHM.pdf",
+                "url" : "Rapport Gestion de projet.pdf",
                 "type" : "pdf"
             },
             {
@@ -27,7 +33,7 @@
             },
             {
                 "nom" : "Dossier d'analyse",
-                "url" : "Dossier d'analyse et de conception.pdf",
+                "url" : "dossier_analyse.pdf",
                 "type" : "pdf"
             }
         ]

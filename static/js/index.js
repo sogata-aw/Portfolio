@@ -10,6 +10,4 @@ window.onload = () => {
     h2s.forEach(h2 => {
         typeWriter(h2);
     });
-
-    const 
 };
