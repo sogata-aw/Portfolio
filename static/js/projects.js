@@ -12,6 +12,7 @@ window.onload = async function () {
 
     const projectTemplate = document.getElementById("project");
     const infoTemplate = document.getElementById("info");
+    const techs = document.querySelectorAll(".techno img");
 
     function loadInfos(id) {
         const clone = document.importNode(infoTemplate.content, true);
@@ -48,16 +49,38 @@ window.onload = async function () {
         view.articleMoreInfo.appendChild(clone);
     }
 
-    const url = window.location.hash.substring(1);
-    if (url) {
-        last_click = url;
+    function highlightTechs(techno){
+        techs.forEach((tech) => {
+            tech.addEventListener("animationend", (event) => {
+                tech.classList.remove("highlight");
+            });
+            
+            if (tech.getAttribute("alt") === techno.getAttribute("alt")){
+                tech.classList.add("highlight");
+            }
+        });
+    } 
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const project = urlParams.get('project');   
+    const tech = urlParams.get('tech');
+    console.log(tech)
+
+    if (project) {
+        last_click = project;
         view.articleMoreInfo.classList.remove("hidden");
         view.articleMoreInfo.classList.add("visible");
         loadInfos(last_click);
         view.articleMoreInfo.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+
+    if(tech){
+        const techno = document.querySelector(`img[alt="${tech}"]`);
+        console.log(techno);
+        highlightTechs(techno);
     }
 
     view.articles.forEach((article) => {
@@ -88,21 +111,7 @@ window.onload = async function () {
 
     view.technos.forEach((techno) => {
         techno.addEventListener("click", () => {
-            console.log("called");
-            const techs = document.querySelectorAll(".techno img");
-            console.log(techs);
-            techs.forEach((tech) => {
-                tech.addEventListener("animationend", (event) => {
-                    tech.classList.remove("highlight");
-                });
-
-                console.log(tech.getAttribute("alt") === techno.getAttribute("alt"))
-                console.log(tech.getAttribute("alt"));
-                console.log(techno.getAttribute("alt"));
-                if (tech.getAttribute("alt") === techno.getAttribute("alt")){
-                    tech.classList.add("highlight");
-                }
-            })
+            highlightTechs(techno);
         });
     })
 }

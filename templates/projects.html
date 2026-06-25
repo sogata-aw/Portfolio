@@ -17,7 +17,7 @@
             <div class="technos">
                 {% for tech in technos %}
                     <div class="tech">
-                        <img src="{{ url_for('static', path=technos[tech].url) }}" alt="{{ technos[tech].url }}">
+                        <img src="{{ url_for('static', path=technos[tech].url) }}" alt="{{ tech }}">
                     </div>
                 {% endfor %}
             </div>
@@ -29,7 +29,7 @@
                     <p>{{ project.nom }}</p>
                     <div class="techno">
                         {% for tech in project.techno %}
-                            <img src="{{ url_for('static', path=technos[tech].url) }}" alt="{{ technos[tech].url }}">
+                            <img src="{{ url_for('static', path=technos[tech].url) }}" alt="{{ tech }}">
                         {% endfor %}
                     </div>
                     <img src="{{ url_for('static', path=project.img) }}" alt="p{{ project.id }}">

@@ -27,35 +27,38 @@
     </aside>
 
     <div class="content">
-        <section>
+        <article>
             <h2>À propos de moi</h2>
+            <section>
             <p class="apropos">
-                J'ai 20 ans et je suis actuellement sur la fin de mes études en BUT Informatique.
+                &nbsp &nbsp J'ai 20 ans et je suis actuellement sur la fin de mes études en BUT Informatique.
                 J'aspire à me spécialiser dans le développement côté Back-end car de mon point de vue, c'est ici qu'on trouve les fonctions les plus intéressantes à coder.
             </p>
         </section>
+        </article>
 
         <!-- ===== PROJETS ===== -->
-        <section class="projet index">
+        <article>
             <h2>Projets récents</h2>
-
-            <div class="projet-list">
-                {% for project in projects %}
-                    <div class="projet-item">
-                        <a href="/projects#p{{ project.id }}">
-                            <div class="projet-item">
-                                {{ project.nom }}
-                            </div>
-                        </a>
-                    </div>
-                {% endfor %}
-            </div>
-
+            <section class="projet">
+            
+                <div class="projet-list">
+                    {% for project in projects %}
+                        <div class="projet-item">
+                            <a href="/projects?project=p{{ project.id }}">
+                                <div class="projet-item">
+                                    {{ project.nom }}
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
             <button id="more"><a href="/projects">En savoir plus</a></button>
-        </section>
+        </article>
 
             <!-- ===== DIPLÔMES ===== -->
-        <article class="sec">
+        <article>
             <h2>Mes diplômes</h2>
             <section>
                 <ul>
@@ -71,36 +74,46 @@
         </article>
 
         <!-- ===== LANGAGES ===== -->
-        <section>
+        <article>
             <h2>Langages informatiques</h2>
-            <div class="programmation">
-                {% for language in languages %}
-                    <div><img class="logo" src="{{ url_for('static', path=languages[language].url) }}"><p>{{ languages[language].name }}</p></div>
-                {% endfor %}
-            </div>
-        </section>
-        <section>
+            <section>
+                <div class="programmation">
+                    {% for language in languages %}
+                        <a href="/projects?tech={{ language }}">
+                            <div><img class="logo" src="{{ url_for('static', path=languages[language].url) }}"><p>{{ languages[language].name }}</p></div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </section>
+        </article>
+        <article>
             <h2>Framworks et utilitaires informatiques</h2>
-            <div class="programmation">
-                {% for framework in frameworks %}
-                    <div><img class="logo" src="{{ url_for('static', path=frameworks[framework].url) }}"><p>{{ frameworks[framework].name }}</p></div>
-                {% endfor %}
-            </div>
-        </section>
+            <section>
+                <div class="programmation">
+                    {% for framework in frameworks %}
+                        <a href="/projects?tech={{ framework }}">
+                            <div><img class="logo" src="{{ url_for('static', path=frameworks[framework].url) }}"><p>{{ frameworks[framework].name }}</p></div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </section>
+        </article>
 
         <!-- ===== SOFT SKILLS ===== -->
-        <section>
+        <article>
             <h2>Soft skills</h2>
-            <div class="soft-skills">
-                <div><img class="logo" src="{{ url_for('static', path='img/crea.png') }}"><p>Créatif</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/resilient.png') }}"><p>Résilient</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/ecoute.png') }}"><p>À l’écoute</p></div>
-                <div><img class="logo" src="{{ url_for('static', path='img/curieux.png') }}"><p>Curieux</p></div>
-            </div>
-        </section>
+            <section>
+                <div class="soft-skills">
+                    <div><img class="logo" src="{{ url_for('static', path='img/crea.png') }}"><p>Créatif</p></div>
+                    <div><img class="logo" src="{{ url_for('static', path='img/resilient.png') }}"><p>Résilient</p></div>
+                    <div><img class="logo" src="{{ url_for('static', path='img/ecoute.png') }}"><p>À l’écoute</p></div>
+                    <div><img class="logo" src="{{ url_for('static', path='img/curieux.png') }}"><p>Curieux</p></div>
+                </div>
+            </section>
+        </article>
 
         <!-- ===== EXPÉRIENCES ===== -->
-        <article class="sec">
+        <article>
             <h2>Expériences professionnelles</h2>
             <section class="experiences">
                 <div class="experience">
@@ -121,7 +134,7 @@
         </article>
 
         <!-- ===== INTÉRÊTS ===== -->
-        <article class="sec">
+        <article>
             <h2>Centres d’intérêts</h2>
             <section>    
                 <ul>
