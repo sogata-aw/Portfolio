@@ -13,6 +13,7 @@ window.onload = async function () {
     const projectTemplate = document.getElementById("project");
     const infoTemplate = document.getElementById("info");
     const techs = document.querySelectorAll(".techno img");
+    const filters = document.querySelector(".filter");
 
     function loadInfos(id) {
         const clone = document.importNode(infoTemplate.content, true);
@@ -62,6 +63,19 @@ window.onload = async function () {
             
             if (tech.getAttribute("alt") === techno.getAttribute("alt")){
                 tech.classList.add("highlight");
+                const div = document.createElement("div");
+                div.innerHTML = `Projets utilisant ${tech.getAttribute("alt")}`;
+                filters.prepend(div);
+                div.classList.add("notif");
+                div.addEventListener("animationend", (event) => {
+                    if(!div.classList.contains("hide")){
+                        div.classList.add("hide");
+                    }else{
+
+                        filters.removeChild(div);
+                    }
+                });
+
             }
         });
     } 
@@ -69,7 +83,6 @@ window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
     const project = urlParams.get('project');   
     const tech = urlParams.get('tech');
-    console.log(tech)
 
     if (project) {
         last_click = project;
