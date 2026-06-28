@@ -63,19 +63,6 @@ window.onload = async function () {
             
             if (tech.getAttribute("alt") === techno.getAttribute("alt")){
                 tech.classList.add("highlight");
-                const div = document.createElement("div");
-                div.innerHTML = `Projets utilisant ${tech.getAttribute("alt")}`;
-                filters.prepend(div);
-                div.classList.add("notif");
-                div.addEventListener("animationend", (event) => {
-                    if(!div.classList.contains("hide")){
-                        div.classList.add("hide");
-                    }else{
-
-                        filters.removeChild(div);
-                    }
-                });
-
             }
         });
     } 
@@ -129,6 +116,17 @@ window.onload = async function () {
 
     view.technos.forEach((techno) => {
         techno.addEventListener("click", () => {
+            const div = document.createElement("div");
+            div.innerHTML = `Projets utilisant ${techno.getAttribute("alt")}`;
+            filters.prepend(div);
+            div.classList.add("notif");
+            div.addEventListener("animationend", (event) => {
+                if(!div.classList.contains("hide")){
+                    div.classList.add("hide");
+                }else{
+                    filters.removeChild(div);
+                }
+            });
             highlightTechs(techno);
         });
     })
